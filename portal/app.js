@@ -100,12 +100,12 @@ app.get('/logout', function (req, res) {
 
   req.flash('success_msg', 'You are logged out');
 
-  res.sendFile("c:/Users/gamal/Desktop/portal/public/html/template/index.html");
+  res.sendFile(path.join(__dirname+'/../public/index.html'));
 });
 app.get('/log', ensureAuthenticated, function (req, res) {
   if (users.couser[0] == 'a') {
 
-    res.sendFile("c:/Users/gamal/Desktop/portal/public/html/template/Admin.html");
+      res.sendFile(path.join(__dirname+'/../public/Admin.html'));
   }
 
   else if (users.couser[0] == 'd') {
@@ -135,19 +135,20 @@ app.get('/log', ensureAuthenticated, function (req, res) {
 
   else {
 
-    res.sendFile("c:/Users/gamal/Desktop/portal/public/html/template/index.html");
+      res.sendFile(path.join(__dirname+'/public/html/template/index.html'));
   }
 
 });
 
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-
-  } else {
-
+function ensureAuthenticated(req, res, next){
+	if(req.isAuthenticated()){
+        return next();
+        
+	} else {
+		
     res.redirect('/users/login');
-  }
+   // res.sendFile(path.join(__dirname+'/../public/Admin.html'));
+	}
 }
 app.use('/users', users);
 app.use('/manager', manager);
@@ -163,9 +164,9 @@ app.use('/managerten', managerten);
 app.use('/managereleven', managereleven);
 app.use('/managerstdreq', managerstdreq);
 
-app.use(function (req, res) {
-  res.sendFile("c:/Users/gamal/Desktop/portal/public/html/template/404.html");
-});
+app.use(function(req, res) {
+  res.sendFile(path.join(__dirname+'/../public/html/template/404.html'));
+ });
 
 //listen to port
 app.listen(3000);

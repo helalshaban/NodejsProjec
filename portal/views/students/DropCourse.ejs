@@ -1,0 +1,9 @@
+<h1>The Respponse Will Be Sent To Your Email Within 2 Days</h1>
+<form method="post" action="/managerstdreq/stdDropCourse2">
+    <select name="slectedCourse">
+        <% if (coursename) {for (var i = 0;i < coursename.length;i++){ %>
+        <option value="<%= coursename[i] %>"><%= coursename[i] %></option>
+        <% }} %>
+    </select>
+    <input type="submit" value="submit">
+</form>

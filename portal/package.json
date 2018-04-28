@@ -1,0 +1,35 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "college portal",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "A&G",
+  "license": "ISC",
+  "dependencies": {
+    "array-slice": "^1.1.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "dateformat": "^3.0.3",
+    "ejs": "^2.5.8",
+    "express": "*",
+    "express-ejs-layouts": "^2.4.0",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-split": "^0.1.2",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nexmo": "^2.2.0",
+    "nodemailer": "^4.6.4",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "socket.io": "^2.1.0"
+  }
+}

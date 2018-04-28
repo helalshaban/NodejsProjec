@@ -1,0 +1,9 @@
+<h1>The Respponse Will Be Sent To Your Email Within 2 Days</h1>
+<form method="post" action="/managerstdreq/submitrequest">
+    <select name="slectedCourse">
+        <% if (data) {for (var i = 0;i < data.length;i++){ %>
+        <option value="<%= data[i].name %>"><%= data[i].name %></option>
+        <% }} %>
+    </select>
+    <input type="submit" value="submit">
+</form>

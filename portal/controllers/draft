@@ -1,0 +1,24 @@
+
+    <h1> <%= data.coursename %> </h1>
+       <table>
+            <tr>
+              <th>Date</th>
+              <th>Announcement</th>
+            </tr>
+            <tr>
+              <% if (data.length != 0) {for (var i=0; i<data.length ; i++){ %>
+              <td><%=  Date.now() %></td>
+              <td><%= data[i].announcement %></td>
+              
+              
+            </tr> 
+            <% }} %>
+          </table> 
+          
+          <input type="textarea" rows="4" cols="50" name="announcementtxt" form="form" >
+          <form style="margin:100px 0" id="form">
+            
+            <input type="submit" name="submit" value="submit" style="margin:30px 0">
+
+          </form>
+  
